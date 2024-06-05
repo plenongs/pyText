@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title> DxD - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<style>
+		.myblock {
+      margin: auto;
+      padding: 15px;
+      padding-top: 15%;
+      text-align: center;
+    }
+    .social .facebook  {
+      display: inline-block;
+      width: 32%;
+      height: 15%;
+      background: url({{url_for('static',filename='anim.jpg')}});
+      background-position: 50% 50%;
+      background-size: cover;
+      border-radius: 50%;
+      border: 2px grey solid;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .oppai {
+      border-radius: 75px 75px;
+      padding: 3px;
+      background: rgba(0,0,0,0.2);
+      width: 15em;
+      border: 2px white solid;
+      text-align: center;
+    }
+    .typed-out{
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s forwards;
+      font-size: 1rem;
+      width: 0;
+      color: white;
+    }
+    .typed-out1{
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 10s forwards;
+      font-size: 0.7rem;
+      width: 0;
+      color: white;
+      text-align: center;
+      display: none;
+      padding-top: 10px;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    .footer{ 
+       position: fixed;     
+       text-align: center;    
+       bottom: 0px; 
+       width: 100%;
+       color: white;
+       font-size: 0.8rem;
+   }  
+		</style>
+		<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='jp.ico')}}">
+  </head>
+  <body style="background-image:url({{url_for('static', filename='bocchi.jpg')}}); background-repeat:no-repeat; background-size:cover;"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <div class="myblock">
+      <div class="social" id="social1">
+        <a class="facebook" href=""></a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="oppai" id="akeno">
+        <div class="typed-out">#OppaiLibs - FlaskApp</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="typed-out1">
+        api-PyText: POST /api/access_token | data: {}
+      </div>
+    </div>
+    <script src="{{url_for('static',filename='fern.js')}}"></script>
+    <div class="footer"> -- PythonApp | 2024 --</div>
+  </body>
+</html>

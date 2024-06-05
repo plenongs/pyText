@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request, jsonify
+from flask import Flask, redirect, url_for, request, jsonify, render_template
 import requests as reqs
 from wit import Wit
 
@@ -35,11 +35,11 @@ def convert_text(url, key, lang=None):
 
 @app.route("/")
 def home():
-  return "oppaiLibs - skmcmy"
+  return render_template("home.html")
   
 @app.route("/api")
 def api_error():
-  return "POST /API/ACCESS_TOKEN \ndata = {'url': 'url audio grecaprcha'}"
+  return "Request Not Complete.."
 
 @app.route("/api/<access_token>", methods=["POST"])
 def api_get(access_token):
