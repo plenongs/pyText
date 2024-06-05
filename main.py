@@ -58,5 +58,5 @@ def api_get(access_token):
   return jsonify(respond_page)
   
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run(debug=False)
    
